@@ -1,6 +1,5 @@
 myFile = open("../input.txt", "r")
-myString = myFile.read()
-myString = myString.strip()
+myString = myFile.read().strip()
 
 total = 0
 for i in range(len(myString)):

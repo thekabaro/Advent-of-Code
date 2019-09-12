@@ -1,14 +1,13 @@
 myFile = open("../input.txt", "r")
-myString = myFile.read()
-myString = myString.strip()
+myString = myFile.read().strip()
 
 total = 0
+half = int(len(myString) / 2)
 for i in range(len(myString)):
-    if (i == len(myString) - 1):
-        if (myString[i] == myString[0]):
-            total += int(myString[i])
-    else:
-        if (myString[i] == myString[i + 1]):
-            total += int(myString[i])
+    num = i + half
+    while (num >= len(myString)):
+        num -= len(myString)
+    if (myString[i] == myString[num]):
+        total += int(myString[num])
 
 print(total)
