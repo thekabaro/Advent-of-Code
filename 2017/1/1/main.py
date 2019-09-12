@@ -1,4 +1,4 @@
-myFile = open("input.txt", "r")
+myFile = open("../input.txt", "r")
 myString = myFile.read()
 myString = myString.strip()
 
